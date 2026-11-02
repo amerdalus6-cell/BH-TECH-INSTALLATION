@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="BH TECH WiFi installation and home internet plans from 50 Mbps to 200 Mbps.">
+  <title>BH TECH | Fast, Reliable WiFi</title>
+  <style>
+    :root{--navy:#071b3a;--blue:#087cf0;--cyan:#21c4ed;--ink:#10213b;--muted:#64748b;--light:#f3f8ff;--white:#fff}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--ink);line-height:1.6}
+    a{text-decoration:none;color:inherit}.wrap{width:min(1120px,92%);margin:auto}
+    header{background:rgba(7,27,58,.96);color:#fff;position:sticky;top:0;z-index:5;box-shadow:0 4px 20px #00142b22}
+    .nav{height:74px;display:flex;align-items:center;justify-content:space-between}.brand{font-size:1.5rem;font-weight:900;letter-spacing:1px}.brand span{color:var(--cyan)}
+    nav{display:flex;gap:28px;font-weight:700;font-size:.94rem}nav a:hover{color:var(--cyan)}
+    .btn{display:inline-block;background:linear-gradient(110deg,var(--blue),var(--cyan));color:#fff;padding:13px 22px;border-radius:999px;font-weight:800;box-shadow:0 8px 22px #087cf044}
+    .hero{background:radial-gradient(circle at 80% 25%,#1263a8 0,#0a3263 30%,#071b3a 72%);color:#fff;padding:94px 0 100px;overflow:hidden}
+    .hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:50px;align-items:center}.eyebrow{color:#6de2ff;font-weight:800;letter-spacing:2px;text-transform:uppercase;font-size:.82rem}
+    h1{font-size:clamp(2.6rem,5.5vw,4.7rem);line-height:1.04;margin:14px 0 22px;letter-spacing:-2px}.hero p{font-size:1.15rem;color:#d8e9ff;max-width:590px;margin-bottom:30px}
+    .hero-art{min-height:320px;display:grid;place-items:center;position:relative}.wifi{width:260px;height:260px;border:2px solid #49d8ff55;border-radius:50%;display:grid;place-items:center;box-shadow:0 0 70px #20bde955,inset 0 0 55px #20bde922;position:relative}
+    .wifi:before,.wifi:after{content:"";position:absolute;border:2px solid #54dfff88;border-radius:50%;width:190px;height:190px}.wifi:after{width:120px;height:120px;border-color:#54dfffaa}
+    .router{z-index:1;background:linear-gradient(145deg,#fff,#b7eaff);width:145px;height:65px;border-radius:18px;box-shadow:0 18px 40px #00152b88;display:grid;place-items:center;color:#087cf0;font-size:2.3rem}
+    .section{padding:78px 0}.section.light{background:var(--light)}.center{text-align:center}.kicker{color:var(--blue);font-weight:900;text-transform:uppercase;letter-spacing:1.5px;font-size:.8rem}
+    h2{font-size:clamp(2rem,4vw,2.8rem);line-height:1.15;margin:10px 0 14px}.sub{color:var(--muted);max-width:650px;margin:0 auto 38px}
+    .plans{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}.plan{background:#fff;border:1px solid #e1eaf5;border-radius:20px;padding:27px 20px;box-shadow:0 12px 35px #0b2c5010;transition:.2s}.plan:hover{transform:translateY(-6px);box-shadow:0 18px 40px #0b2c5020}
+    .speed{font-size:2.4rem;font-weight:900;color:var(--blue);line-height:1}.speed small{font-size:.95rem;color:var(--muted)}.plan h3{margin:14px 0 6px}.plan p{color:var(--muted);font-size:.93rem;min-height:48px}.price{font-size:1.2rem;font-weight:900;margin:18px 0;color:var(--navy)}.price span{font-size:.8rem;font-weight:500;color:var(--muted)}
+    .plan .btn{display:block;text-align:center;padding:11px}.note{font-size:.82rem;color:var(--muted);margin-top:20px}
+    .features{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}.feature{padding:26px;border-radius:18px;background:#fff;border:1px solid #e5edf7}.ico{width:48px;height:48px;border-radius:14px;background:#e6f4ff;color:var(--blue);display:grid;place-items:center;font-size:1.5rem}
+    .feature h3{margin:14px 0 6px}.feature p{color:var(--muted);margin:0}
+    .cta{background:linear-gradient(110deg,#087cf0,#0752a8);color:#fff;border-radius:26px;padding:46px;display:flex;align-items:center;justify-content:space-between;gap:25px}.cta p{color:#e0f0ff;margin:6px 0 0}.cta .btn{background:#fff;color:#0752a8;white-space:nowrap}
+    .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:35px;align-items:start}.contact-card{background:#fff;padding:28px;border:1px solid #e2eaf4;border-radius:20px}.contact-card p{color:var(--muted)}
+    form{display:grid;gap:12px}input,textarea,select{width:100%;padding:14px;border:1px solid #d8e3ef;border-radius:10px;font:inherit}textarea{min-height:110px;resize:vertical}button{border:0;cursor:pointer;font:inherit}
+    footer{background:var(--navy);color:#d3e4f8;padding:30px 0}.foot{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}.foot strong{color:#fff}
+    @media(max-width:850px){.hero-grid{grid-template-columns:1fr}.hero-art{min-height:240px}.plans{grid-template-columns:repeat(2,1fr)}.features{grid-template-columns:1fr 1fr}}
+    @media(max-width:600px){.nav{height:auto;padding:17px 0;align-items:flex-start;gap:15px;flex-direction:column}nav{gap:15px;flex-wrap:wrap;font-size:.85rem}.nav>.btn{display:none}.hero{padding:65px 0}.plans,.features,.contact-grid{grid-template-columns:1fr}.cta{padding:30px;display:block}.cta .btn{margin-top:20px}.section{padding:58px 0}}
+  </style>
+</head>
+<body>
+<header><div class="wrap nav">
+  <a class="brand" href="#home">BH <span>TECH</span></a>
+  <nav><a href="#home">Home</a><a href="#plans">Internet Plans</a><a href="#services">Services</a><a href="#contact">Contact</a></nav>
+  <a class="btn" href="tel:+639655117951">Call BH TECH</a>
+</div></header>
+<main>
+<section class="hero" id="home"><div class="wrap hero-grid">
+  <div><div class="eyebrow">Your connection starts here</div><h1>Fast WiFi.<br>Better Living.</h1>
+    <p>Stay connected with BH TECH. Get dependable home internet and professional WiFi installation, with speed plans from 50 Mbps up to 200 Mbps.</p>
+    <a class="btn" href="#plans">Explore Internet Plans</a>
+  </div>
+  <div class="hero-art"><div class="wifi"><div class="router">⌁</div></div></div>
+</div></section>
+<section class="section light" id="plans"><div class="wrap center">
+  <div class="kicker">Choose your speed</div><h2>BH TECH Internet Plans</h2>
+  <p class="sub">Find the right connection for browsing, online classes, streaming, gaming, and your family's everyday needs.</p>
+  <div class="plans">
+    <article class="plan"><div class="speed">50 <small>Mbps</small></div><h3>Starter Plan</h3><p>Great for browsing, messaging, and everyday use.</p><div class="price">Contact us <span>for price</span></div><a class="btn" href="#contact">Inquire Now</a></article>
+    <article class="plan"><div class="speed">100 <small>Mbps</small></div><h3>Family Plan</h3><p>Enjoy smooth browsing and streaming on multiple devices.</p><div class="price">Contact us <span>for price</span></div><a class="btn" href="#contact">Inquire Now</a></article>
+    <article class="plan"><div class="speed">150 <small>Mbps</small></div><h3>Power Plan</h3><p>More speed for busy homes and heavier internet use.</p><div class="price">Contact us <span>for price</span></div><a class="btn" href="#contact">Inquire Now</a></article>
+    <article class="plan"><div class="speed">200 <small>Mbps</small></div><h3>Ultra Plan</h3><p>Our fastest plan for demanding connected households.</p><div class="price">Contact us <span>for price</span></div><a class="btn" href="#contact">Inquire Now</a></article>
+  </div>
+  <p class="note">Plan availability, actual speeds, installation fees, and monthly rates are subject to confirmation. Contact BH TECH for details.</p>
+</div></section>
+<section class="section" id="services"><div class="wrap center">
+  <div class="kicker">Why BH TECH</div><h2>WiFi Installation Made Simple</h2><p class="sub">From setup to getting your devices online, we're here to help you stay connected.</p>
+  <div class="features">
+    <article class="feature"><div class="ico">⌁</div><h3>WiFi Installation</h3><p>Professional setup to help get your home or workspace connected.</p></article>
+    <article class="feature"><div class="ico">⌂</div><h3>Home Internet</h3><p>Internet speed options designed for different household needs.</p></article>
+    <article class="feature"><div class="ico">◎</div><h3>Friendly Assistance</h3><p>Contact our team for plan information, installation inquiries, and support.</p></article>
+  </div>
+</div></section>
+<section class="section light"><div class="wrap"><div class="cta"><div><h2>Ready to upgrade your WiFi?</h2><p>Talk to BH TECH and find the right plan for your home.</p></div><a class="btn" href="#contact">Contact BH TECH</a></div></div></section>
+<section class="section" id="contact"><div class="wrap">
+  <div class="center"><div class="kicker">Let's get you connected</div><h2>Contact BH TECH</h2><p class="sub">Send an inquiry about installation or available internet plans.</p></div>
+  <div class="contact-grid">
+    <div class="contact-card"><h3>Talk to our team</h3><p><strong>Business:</strong> BH TECH</p><p><strong>Services:</strong> WiFi installation and internet plans (50–200 Mbps)</p><p><a class="btn" href="tel:+639655117951">Call 0965 511 7951</a></p><p><a href="mailto:basitdalus41@gmail.com">Email basitdalus41@gmail.com</a></p><p><strong>Phone:</strong> <a href="tel:+639655117951">0965 511 7951</a></p><p><strong>Gmail:</strong> <a href="mailto:basitdalus41@gmail.com">basitdalus41@gmail.com</a></p><p><strong>Location:</strong> Add your service area here</p><p>Call or email us for plan details and installation inquiries.</p></div>
+    <div class="contact-card"><form id="inquiry"><input name="name" placeholder="Your name" required><input name="phone" placeholder="Your phone number" required><select name="plan"><option value="">Choose an internet plan</option><option>50 Mbps</option><option>100 Mbps</option><option>150 Mbps</option><option>200 Mbps</option></select><textarea name="message" placeholder="Your address or message"></textarea><button class="btn" type="submit">Send Inquiry</button><small id="formmsg" aria-live="polite" style="color:#64748b">Your inquiry will be prepared in an email to BH TECH.</small></form></div>
+  </div>
+</div></section>
+</main>
+<footer><div class="wrap foot"><div><strong>BH TECH</strong><br>Fast WiFi. Better Living.<br><a href="tel:+639655117951">0965 511 7951</a> · <a href="mailto:basitdalus41@gmail.com">basitdalus41@gmail.com</a></div><div>© <span id="year"></span> BH TECH. All rights reserved.</div></div></footer>
+<script>
+document.getElementById('year').textContent=new Date().getFullYear();
+document.getElementById('inquiry').addEventListener('submit',function(e){
+  e.preventDefault();
+  const data=new FormData(this);
+  const subject=encodeURIComponent('BH TECH Internet Inquiry');
+  const body=encodeURIComponent('Name: '+data.get('name')+'\\nPhone: '+data.get('phone')+'\\nPlan: '+data.get('plan')+'\\nMessage: '+data.get('message'));
+  window.location.href='mailto:basitdalus41@gmail.com?subject='+subject+'&body='+body;
+});
+</script>
+</body></html>
